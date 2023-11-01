@@ -1,15 +1,15 @@
 
-<div class="background">
-<form action="" method="post">
+
+<form >
   <div class="container">
     <h2 class="header">PKI Authentication</h2>
     <div class="center">
     <label for="uname"><b>Mobile Number</b></label>
     <p>
-    <input type="text" placeholder="Enter Mobile Number" name="uname" required>
+    <input type="text" placeholder="Enter Mobile Number" name="uname" required autocomplete="off">
     </p>   
-    <button type="submit">Login</button>
+    <button type="submit" (click)="onLogin()">Login</button>
 </div>
   </div>
 </form>
-</div>
+

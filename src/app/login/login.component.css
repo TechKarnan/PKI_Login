@@ -38,13 +38,7 @@ button:hover {
   border-radius: 5%;
 }
 
-.background{
-    background-image: url('src\assets\background.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;  
-    background-size: 100%;
-    overflow: hidden;
-}
+
 
 span.psw {
   float: right;
