@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http-service';
 import { AuthenticateModel } from '../models/authenticateModel';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,10 +10,14 @@ import { AuthenticateModel } from '../models/authenticateModel';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private http:HttpService){
+  constructor(private http:HttpService,private router:Router){
   }
 
   ngOnInit(): void {
+  }
+
+  navigate(){
+    this.router.navigateByUrl("home");
   }
 
   onLogin(){
@@ -44,6 +49,7 @@ export class LoginComponent implements OnInit {
           this.getStatusApi(respcode);
         }else{
           console.log(data);
+          this.router.navigateByUrl("home");
         }
       },(err)=>{
         if(err.error.errorCd =="3105"){
