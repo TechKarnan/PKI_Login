@@ -14,15 +14,25 @@ export class HttpService {
     const headers = { 'content-type': 'application/json'}  
     const body=JSON.stringify(authenticateModel);
     console.log(body)
-    return this.http.post(environment.authenticateDevUrl, body,{'headers':headers})
+    return this.http.post(environment.authenticateIpUrl, body,{'headers':headers})
 
   }
+
+
+  getSignature(authenticateModel:AuthenticateModel){
+    const headers = { 'content-type': 'application/json'}  
+    const body=JSON.stringify(authenticateModel);
+    console.log(body)
+    return this.http.post(environment.getSignatureUrl, body,{'headers':headers})
+
+  }
+
 
 
   getStatus(respCode:string){
     let params = new HttpParams()
     params=params.set('rescode', respCode);
-    return this.http.get(environment.getStatusDevUrl,{params});
+    return this.http.get(environment.getStatusIpUrl,{params});
   }
 
 }

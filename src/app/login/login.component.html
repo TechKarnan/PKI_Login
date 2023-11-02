@@ -1,14 +1,14 @@
 
 
-<form >
+<form [formGroup]="loginForm" (ngSubmit)="onLogin()">
   <div class="container">
     <h2 class="header">PKI Authentication</h2>
     <div class="center">
-    <label for="uname"><b>Mobile Number</b></label>
+    <label for="mobile"><b>Mobile Number</b></label>
     <p>
-    <input type="text" placeholder="Enter Mobile Number" name="uname" required autocomplete="off">
+    <input type="text" placeholder="Enter Mobile Number" name="uname" required autocomplete="off"  formControlName="mobileNumber">
     </p>   
-    <button type="submit" (click)="onLogin()">Login</button>
+    <button type="submit">Login</button>
 </div>
   </div>
 </form>

@@ -1,9 +1,11 @@
 export class AuthenticateModel{
-    id:string =""
-    org:string =""
-	txn:string =""
-	hash:string =""
-	reqType:string =""
-	respUrl:string =""
-	docUrl:string =""
+    phoneNumber: string=""
+    transactionId:string=""
+    organizationName:string="" 
+    hash:string=""
+    reqType:string=""
+    responseURL:string=""
+    docURL:string=""
+    signature:string=""
+    timestamp:any=""
 }
