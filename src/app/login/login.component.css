@@ -45,6 +45,10 @@ span.psw {
   padding-top: 16px;
 }
 
+.error{
+  color:red;
+}
+
 .center {
     margin: auto;
     width: 50%;

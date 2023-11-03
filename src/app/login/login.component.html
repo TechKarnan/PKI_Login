@@ -1,15 +1,19 @@
 
-
+<div>
 <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
   <div class="container">
     <h2 class="header">PKI Authentication</h2>
     <div class="center">
     <label for="mobile"><b>Mobile Number</b></label>
     <p>
-    <input type="text" placeholder="Enter Mobile Number" name="uname" required autocomplete="off"  formControlName="mobileNumber">
+    <input type="text" placeholder="Enter Mobile Number" name="uname" autocomplete="off"  formControlName="mobileNumber" required >
     </p>   
     <button type="submit">Login</button>
+    <div *ngIf="isRejected">Authentication request was Rejected..!</div>
+    <div *ngIf="noMobileNumber" class="error">please enter the mobile number</div>
+    <div *ngIf="isError" class="error">{{errorMsg}}</div>
 </div>
   </div>
 </form>
-
+</div>
+<ngx-ui-loader></ngx-ui-loader>
