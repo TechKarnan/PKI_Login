@@ -9,7 +9,8 @@
     <input type="text" placeholder="Enter Mobile Number" name="uname" autocomplete="off"  formControlName="mobileNumber" required >
     </p>   
     <button type="submit">Login</button>
-    <div *ngIf="isRejected">Authentication request was Rejected..!</div>
+    <!-- <button (click)="navigate()">navigate</button> -->
+    <div *ngIf="isRejected" class="error">Authentication request was Rejected..!</div>
     <div *ngIf="noMobileNumber" class="error">please enter the mobile number</div>
     <div *ngIf="isError" class="error">{{errorMsg}}</div>
 </div>
